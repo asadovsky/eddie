@@ -1,0 +1,14 @@
+{
+  "name": "eddie",
+  "version": "0.0.1",
+  "dependencies": {
+    "inherits": "^2.0.1",
+    "lodash": "^4.3.0"
+  },
+  "devDependencies": {
+    "browserify": "^12.0.1",
+    "jshint": "^2.8.0",
+    "tape": "^4.2.2"
+  },
+  "license": "Apache-2.0"
+}
