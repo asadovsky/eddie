@@ -29,14 +29,14 @@ dist/eddie.min.js: index.js $(shell find . -name '*.js') node_modules
 ########################################
 # Test, clean, and lint
 
-dist/tests/eddie.min.js: tests/eddie.js $(shell find . -name '*.js' -maxdepth 1) node_modules
+dist/test/eddie.min.js: test/eddie.js $(shell find . -name '*.js' -maxdepth 1) node_modules
 	$(call BROWSERIFY,$<,$@)
 
 # TODO: Use https://github.com/hughsk/smokestack or similar.
 .PHONY: test
-test: dist/tests/eddie.min.js
-	@cp tests/eddie.html dist/tests
-	open file://$(shell pwd)/dist/tests/eddie.html
+test: dist/test/eddie.min.js
+	@cp test/eddie.html dist/test
+	open file://$(shell pwd)/dist/test/eddie.html
 
 .PHONY: clean
 clean:
