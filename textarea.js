@@ -145,6 +145,9 @@ Editor.prototype.updateSelection_ = function(e) {
   }
   var that = this;
   window.setTimeout(function() {
+    if (that.m_.paused()) {
+      return;
+    }
     // TODO: Canonicalize line breaks.
     that.m_.setSelectionRange(that.ta_.selectionStart, that.ta_.selectionEnd);
   }, 0);

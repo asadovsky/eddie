@@ -32,12 +32,13 @@ Model.prototype.deleteText = function(pos, len) {
   return this.replaceText(pos, len, '');
 };
 
-// Replaces 'len' characters, starting at position 'pos', with 'value'.
-// Assumes line breaks have been canonicalized to \n.
+// Replaces text.substr(pos, len) with the given value and updates the selection
+// range accordingly. Assumes line breaks have been canonicalized to \n.
 Model.prototype.replaceText = function(pos, len, value) {
   throw new Error('not implemented');
 };
 
+// Updates the selection range to the half-closed interval [start, end).
 Model.prototype.setSelectionRange = function(start, end) {
   throw new Error('not implemented');
 };
