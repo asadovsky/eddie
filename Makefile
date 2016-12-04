@@ -16,8 +16,7 @@ endef
 all: build
 
 node_modules: package.json
-	npm prune
-	npm install
+	yarn install
 	touch $@
 
 .PHONY: build
